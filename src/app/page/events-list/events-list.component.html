@@ -7,7 +7,9 @@
 
     </div>
   </div>
-
+  <button   [routerLink]="['event/' + 0]" class="btn btn-success btn-block btn-lg">
+    <i class="fa fa-plus">Add Event</i>
+  </button>
   <table class="table">
     <thead>
       <tr>
@@ -29,7 +31,9 @@
             <button [routerLink]="['event/' + event.id]" class="btn btn-info">
               <i class="fa fa-pencil"></i>
             </button>
-
+            <button (click)="onDelete(event)" class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
           </div>
         </td>
       </tr>
